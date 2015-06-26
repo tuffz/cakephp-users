@@ -52,7 +52,7 @@
 					__d('users', 'Delete'),
 					array('action' => 'delete', $user[$model]['id']),
 					null,
-					sprintf(__d('users', 'Are you sure you want to delete # %s?'), $user[$model]['id'])
+					__d('users', 'Are you sure you want to delete # %s?', $user[$model]['id'])
 				); ?>
 			</td>
 		</tr>

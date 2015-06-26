@@ -60,7 +60,7 @@
 				<td class="actions">
 					<?php echo $this->Html->link(__d('users', 'View'), array('action' => 'view', $user[$model]['id'])); ?>
 					<?php echo $this->Html->link(__d('users', 'Edit'), array('action' => 'edit', $user[$model]['id'])); ?>
-					<?php echo $this->Html->link(__d('users', 'Delete'), array('action' => 'delete', $user[$model]['id']), null, sprintf(__d('users', 'Are you sure you want to delete # %s?'), $user[$model]['id'])); ?>
+					<?php echo $this->Html->link(__d('users', 'Delete'), array('action' => 'delete', $user[$model]['id']), null, __d('users', 'Are you sure you want to delete # %s?', $user[$model]['id'])); ?>
 				</td>
 			</tr>
 		<?php endforeach; ?>

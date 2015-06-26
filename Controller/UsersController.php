@@ -483,7 +483,7 @@ class UsersController extends UsersAppController {
 				if ($this->here == $this->Auth->loginRedirect) {
 					$this->Auth->loginRedirect = '/';
 				}
-				$this->Session->setFlash(sprintf(__d('users', '%s you have successfully logged in'), $this->Auth->user($this->{$this->modelClass}->displayField)));
+				$this->Session->setFlash(__d('users', '%s you have successfully logged in', $this->Auth->user($this->{$this->modelClass}->displayField)));
 				if (!empty($this->request->data)) {
 					$data = $this->request->data[$this->modelClass];
 					if (empty($this->request->data[$this->modelClass]['remember_me'])) {
@@ -572,7 +572,7 @@ class UsersController extends UsersAppController {
 		$user = $this->Auth->user();
 		$this->Session->destroy();
 		$this->RememberMe->destroyCookie();
-		$this->Session->setFlash(sprintf(__d('users', '%s you have successfully logged out'), $user[$this->{$this->modelClass}->displayField]));
+		$this->Session->setFlash(__d('users', '%s you have successfully logged out', $user[$this->{$this->modelClass}->displayField]));
 		$this->redirect($this->Auth->logout());
 	}
 
@@ -797,9 +797,7 @@ class UsersController extends UsersAppController {
 					->send();
 
 				if ($admin) {
-					$this->Session->setFlash(sprintf(
-						__d('users', '%s has been sent an email with instruction to reset their password.'),
-						$user[$this->modelClass]['email']));
+					$this->Session->setFlash(__d('users', '%s has been sent an email with instruction to reset their password.', $user[$this->modelClass]['email']));
 					$this->redirect(array('action' => 'index', 'admin' => true));
 				} else {
 					$this->Session->setFlash(__d('users', 'You should receive an email with further instructions shortly'));

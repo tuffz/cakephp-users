@@ -418,7 +418,7 @@ class User extends UsersAppModel {
 	public function validateOldPassword($password) {
 		if (!isset($this->data[$this->alias]['id']) || empty($this->data[$this->alias]['id'])) {
 			if (Configure::read('debug') > 0) {
-				throw new OutOfBoundsException(sprintf(__d('users', '%s has to be set and not empty'), $this->data[$this->alias]['id']));
+				throw new OutOfBoundsException(__d('users', '%s has to be set and not empty', $this->data[$this->alias]['id']));
 			}
 		}
 
