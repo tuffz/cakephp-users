@@ -15,8 +15,8 @@ That it works out of the box doesn't mean it is thought to be used exactly like 
 Requirements
 ------------
 
-* CakePHP 2.5+
-* PHP 5.2.8+
+* CakePHP 2.6+
+* PHP 5.3+
 * [CakeDC Utils plugin](http://github.com/CakeDC/utils) (Optional but recommended)
 * [CakeDC Search plugin](http://github.com/CakeDC/search) (Optional but recommended)
 
